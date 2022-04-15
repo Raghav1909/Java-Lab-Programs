@@ -18,13 +18,31 @@ class Point {
 
     void quadrant() {
         if (x > 0 && y > 0)
-            System.out.println("Point lies in first quadrant");
+            System.out.println("Point lies in First quadrant");
+
         else if (x < 0 && y > 0)
-            System.out.println("Point lies in second quadrant");
+            System.out.println("Point lies in Second quadrant");
+
         else if (x < 0 && y < 0)
-            System.out.println("Point lies in third quadrant");
+            System.out.println("Point lies in Third quadrant");
+
+        else if (x > 0 && y < 0)
+            System.out.println("Point lies in Fourth quadrant");
+
+        else if (x == 0 && y > 0)
+            System.out.println("Point lies at positive y axis");
+
+        else if (x == 0 && y < 0)
+            System.out.println("Point lies at negative y axis");
+
+        else if (y == 0 && x < 0)
+            System.out.println("Point lies at negative x axis");
+
+        else if (y == 0 && x > 0)
+            System.out.println("Point lies at positive x axis");
+
         else
-            System.out.println("Point lies in fourth quadrant");
+            System.out.println("Point lies at origin");
     }
 
     void checkTriangle(Point a, Point b, Point c) {
@@ -41,7 +59,6 @@ class Point {
         System.out
                 .println("Distance between points (" + a.x + "," + a.y + ") and (" + b.x + "," + b.y + ") is " + dist);
     }
-
 }
 
 public class Program3 {
@@ -52,5 +69,7 @@ public class Program3 {
         Point res = new Point();
         res.checkTriangle(p1, p2, p3);
         res.distance(p1, p2);
+        res.distance(p2, p3);
+        res.distance(p1, p3);
     }
 }
