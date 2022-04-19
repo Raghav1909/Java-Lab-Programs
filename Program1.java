@@ -33,10 +33,16 @@ class Matrix {
 
     Matrix multiplication(Matrix a, Matrix b) {
         Matrix result = new Matrix();
-        return result;
-        if(a.n == b.m){
-            for(int i = 0; i < m; i++)
+        result.arr = new int[a.m][b.n];
+        if (a.n == b.m) {
+            for (int i = 0; i < a.m; i++) {
+                for (int j = 0; j < b.n; j++) {
+                    for (int k = 0; k < b.m; k++)
+                        result.arr[i][j] += a.arr[i][k] * b.arr[k][j];
+                }
+            }
         }
+        return result;
     }
 
     void display() {
@@ -54,6 +60,7 @@ public class Program1 {
         Matrix mat1 = new Matrix();
         Matrix mat2 = new Matrix();
         Matrix res = new Matrix();
+        Matrix res2 = new Matrix();
 
         mat1.read();
         mat1.display();
@@ -61,5 +68,7 @@ public class Program1 {
         mat2.display();
         res = res.addition(mat1, mat2);
         res.display();
+        res2 = res2.multiplication(mat1, mat2);
+        res2.display();
     }
 }
