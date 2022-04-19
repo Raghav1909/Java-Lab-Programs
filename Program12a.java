@@ -18,7 +18,7 @@ enum StudentData {
     }
 }
 
-public class StudentDataEx {
+public class Program12a {
     public static void main(String args[]) {
         for (StudentData sd : StudentData.values())
             System.out.println(sd + "\t" + sd.getGrade() + "\t" + sd.getStatus());
