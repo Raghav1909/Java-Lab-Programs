@@ -4,7 +4,7 @@ class Point {
     Point() {
         x = 0;
         y = 0;
-        System.out.println("Point created at (" + x + "," + y + ")");
+        System.out.println("Point initiated at (" + x + "," + y + ")");
     }
 
     Point(int x, int y) {
