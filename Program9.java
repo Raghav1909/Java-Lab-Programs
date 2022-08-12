@@ -24,5 +24,7 @@ class Program9 {
         long l = l_ref.longValue();
         System.out.println("Value of Autoboxing of long: " + l_ref);
         System.out.println("Value of unboxing of long: " + l);
+        Byte bb = new Byte((byte) 9);
+        byte b1 = bb.byteValue();
     }
 }

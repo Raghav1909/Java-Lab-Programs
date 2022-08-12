@@ -53,7 +53,7 @@ class Point {
 
     void distance(Point a, Point b) {
         double dist;
-        dist = Math.sqrt((b.x - a.x) * (b.x - a.x) - (b.y - a.y) * (b.y - a.y));
+        dist = Math.sqrt((b.x - a.x) * (b.x - a.x) + (b.y - a.y) * (b.y - a.y));
         System.out
                 .println("Distance between points (" + a.x + "," + a.y + ") and (" + b.x + "," + b.y + ") is " + dist);
     }

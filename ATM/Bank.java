@@ -10,15 +10,16 @@ public class Bank {
         this.name = name;
         balance = 1000;
         minBal = 100;
+        System.out.println("Bank account successfully created.");
     }
 
-    public void getDeposit(double amt) {
+    public void deposit(double amt) {
         balance += amt;
         System.out.println("Amount deposited = " + amt);
         checkBalance();
     }
 
-    public void getWithdraw(double amt) {
+    public void withdraw(double amt) {
         if (balance - amt > minBal) {
             balance -= amt;
             System.out.println("Amount withdrawn = " + amt);
