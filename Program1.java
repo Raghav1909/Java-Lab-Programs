@@ -24,11 +24,10 @@ class Matrix {
                 for (int j = 0; j < a.n; j++)
                     result.arr[i][j] = a.arr[i][j] + b.arr[i][j];
             }
-            return result;
-        } else {
+        } else
             System.out.println("Addition is not possible");
-            return result;
-        }
+
+        return result;
     }
 
     Matrix multiplication(Matrix a, Matrix b) {

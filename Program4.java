@@ -1,45 +1,28 @@
-// class Name {
-//     String name;
-
-//     Name(String name) {
-//         this.name = name;
-//     }
-
-//     void length() {
-//         System.out.println("Length of string is " + name.length());
-//     }
-
-//     void isLetterPresent(String letter) {
-//         if (name.contains(letter))
-//             System.out.println("The string contains the letter " + letter);
-//         else
-//             System.out.println("The string contains the letter " + letter);
-//     }
-
-//     void printOccurences(char letter) {
-//         System.out.print("'" + letter + "'" + " is present at positions: ");
-//         for (int i = 0; i < name.length(); i++) {
-//             if (name.charAt(i) == letter) {
-//                 System.out.print(i + " ");
-//             }
-//         }
-//     }
-// }
-
-// public class Program4 {
-//     public static void main(String[] args) {
-//         Name n = new Name("Pranav");
-//         n.length();
-//         n.isLetterPresent("v");
-//         n.printOccurences('a');
-//     }
-// }
+import java.util.Scanner;
 
 public class Program4 {
     public static void main(String[] args) {
-        String name = new String("Pranav");
-        System.out.println(name);
-        System.out.println(name.contains("v"));
-
+        int count = 0;
+        int a[] = new int[10];
+        Scanner ip = new Scanner(System.in);
+        System.out.println("Enter the name:");
+        String name = ip.next();
+        System.out.println("Length of the name: " + name.length());
+        System.out.println("Enter character to be searched");
+        char key = ip.next().charAt(0);
+        for (int i = 0; i < name.length(); i++) {
+            if (name.charAt(i) == key) {
+                System.out.println(count + " " + key);
+                a[++count] = i;
+            }
+        }
+        if (count == 0)
+            System.out.println("Character is not found");
+        else {
+            System.out.println("Frequency of inputted character is " + count);
+            System.out.println("Locations in which the given character is present are ");
+            for (int i = 0; i <= count; i++)
+                System.out.println(a[i] + 1);
+        }
     }
 }

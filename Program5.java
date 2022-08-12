@@ -14,9 +14,9 @@ class DailyWorker extends Worker {
         super(name, salary_rate);
     }
 
-    void comPay(int hours) {
+    void comPay(int days) {
         double salary;
-        salary = hours * salary_rate;
+        salary = days * 24 * salary_rate;
         System.out.println("Salary of " + name + " is " + salary);
     }
 }
